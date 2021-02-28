@@ -3,6 +3,7 @@ const app = express();
 const {MongoClient} = require('mongodb');
 const mongoose = require('mongoose');
 require ('dotenv/config');
+var host = process.env.HOST || '0.0.0.0';
 //Import Routes
 const authRoute = require('./routes/auth');
 
@@ -13,9 +14,6 @@ const authRoute = require('./routes/auth');
 app.use('/', authRoute);
 app.use('/user', authRoute);
 app.use('/api/customers', authRoute);
-
-
-
 
 
 //Connect to MongoDb 
@@ -30,7 +28,6 @@ mongoose.connect(url, { useNewUrlParser: true}, ()=> console.log('connect to dat
 );
     //Create an instance of mongodb client
 const client = new MongoClient(url);
-const port = 6000;
+const port = 3000;
 // Listen on a specific host via the HOST environment variable
-var host = process.env.HOST || '0.0.0.0';
 app.listen(port, ()=> console.log(`server started on port ${port}`));

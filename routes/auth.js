@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/', (req, res)=>{
 
-    res.send('hompagePost')
+    res.send('hompagePuuuuuuuost')
 });
 
 router.post('/register', (req, res)=>{
@@ -11,8 +11,9 @@ router.post('/register', (req, res)=>{
 });
 
 router.post('/user', (req, res)=>{
-    res.send('user route')
+    res.send('user rout')
 });
+
 
 router.get('/api/customers', (req, res)=>{
     const customers = [
@@ -21,6 +22,8 @@ router.get('/api/customers', (req, res)=>{
         {id:3, FirstName:"May", LastName:"roy"},
         {id:4, FirstName:"Mark", LastName:"lack"}
     ];
+    //Make axios call here
+
      res.json(customers)
 });
 module.exports = router; 
