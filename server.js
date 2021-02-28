@@ -13,6 +13,7 @@ const authRoute = require('./routes/auth');
 //Route middlewares
 app.use('/', authRoute);
 app.use('/user', authRoute);
+app.use('/register', authRoute);
 app.use('/api/customers', authRoute);
 
 
