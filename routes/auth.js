@@ -1,6 +1,6 @@
 const express= require('express');
 const router = express.Router();
-
+const records = require('./records');
 router.get('/', (req, res)=>{
     res.json({"greeting": "hello world"})
  
@@ -12,7 +12,8 @@ router.get('/register/:id', (req, res)=>{
 });
 
 router.post('/user', (req, res)=>{
-    res.send('user rout')
+    const quotes = records.getQuotes();
+    res.json(quotes);
 });
 
 

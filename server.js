@@ -8,8 +8,6 @@ var host = process.env.HOST || '0.0.0.0';
 const authRoute = require('./routes/auth');
 
 
-
-
 //Route middlewares
 app.use('/', authRoute);
 app.use('/user', authRoute);
