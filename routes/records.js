@@ -15,6 +15,8 @@ function getQuotes(){
       });
     });
   }
+
+
 /**
  * Gets a specific quote by ID
  * @param {number} id - Accepts the ID of the specified quote.

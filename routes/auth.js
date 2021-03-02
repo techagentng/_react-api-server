@@ -11,8 +11,8 @@ router.get('/register/:id', (req, res)=>{
     res.json(myQuote)
 });
 
-router.get('/user', (req, res)=>{
-    const quotes = records.getQuotes();
+router.get('/quotes', async(req, res)=>{
+    const quotes = await records.getQuotes();
     res.json(quotes);
 });
 
